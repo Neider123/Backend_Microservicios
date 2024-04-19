@@ -18,7 +18,6 @@ import com.example.backend.repository.UsuarioRepository;
 
 
 
-
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {

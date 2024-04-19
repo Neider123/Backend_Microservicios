@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  app:
+    image: springboot-app:latest
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+  db:
+    db:
+  image: mysql
+  volumes:
+    - db-data:/var/lib/mysql/data  # Persistent data volume
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: alumno # Replace with your database name
+    MYSQL_USER: root
